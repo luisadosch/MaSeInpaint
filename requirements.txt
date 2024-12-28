@@ -1,0 +1,6 @@
+# requirements.txt
+opencv-python-headless
+numpy
+pandas
+matplotlib
+jupyterlab

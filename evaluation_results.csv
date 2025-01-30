@@ -1,0 +1,4 @@
+Model	FID	Improvement in % compared to Baseline
+Baseline (OpenCV)	37.68	0
+Stable Diffusion	49.47	-31
+LaMa	31.58	16

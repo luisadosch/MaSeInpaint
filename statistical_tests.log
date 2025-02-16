@@ -1,0 +1,17 @@
+2025-02-16 14:14:59,398 - __main__ - INFO - Running statistical tests (TEST=False)
+2025-02-16 14:14:59,774 - __main__ - INFO - Found 1000 images in all directories
+2025-02-16 14:14:59,774 - __main__ - INFO - Loading the images
+2025-02-16 14:15:11,123 - __main__ - INFO - Loaded 1000 Real images
+2025-02-16 14:15:11,123 - __main__ - INFO - Loaded 1000 Lama images
+2025-02-16 14:15:11,123 - __main__ - INFO - Loaded 1000 OpenCV images
+2025-02-16 14:15:11,123 - __main__ - INFO - Loaded 1000 SD images
+2025-02-16 14:17:44,580 - __main__ - INFO - FID (Lama): 31.672792434692383
+2025-02-16 14:17:44,580 - __main__ - INFO - FID (OpenCV): 37.10226058959961
+2025-02-16 14:17:44,580 - __main__ - INFO - FID (SD): 32.127830505371094
+2025-02-16 14:17:44,580 - __main__ - INFO - FID scores saved to fid_scores.json
+2025-02-16 14:17:44,580 - __main__ - INFO - Calculating bootstrapped FID scores and performing statistical tests
+2025-02-16 14:17:44,580 - __main__ - INFO - Calculating bootstrapped FID Lama
+2025-02-16 20:20:44,897 - __main__ - INFO - Bootstrapped FID scores saved to bootstraped_fid_lama.npy
+2025-02-16 20:20:44,897 - __main__ - INFO - Normality test (Lama)
+2025-02-16 20:20:44,898 - __main__ - INFO - Normality test (Lama): True, details: {'statistic': 0.9975527601331395, 'p_value': 0.6799608874470291, 'normal': 'True'}
+2025-02-16 20:20:44,898 - __main__ - INFO - Calculating bootstrapped OpenCV

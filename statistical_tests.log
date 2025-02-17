@@ -19,3 +19,23 @@
 2025-02-17 02:27:31,132 - __main__ - INFO - Normality test (OpenCV)
 2025-02-17 02:27:31,133 - __main__ - INFO - Normality test (OpenCV): True, details: {'statistic': 0.9987331764083414, 'p_value': 0.9798370540166224, 'normal': 'True'}
 2025-02-17 02:27:31,133 - __main__ - INFO - Calculating bootstrapped SD Inpaint
+2025-02-17 08:35:33,647 - __main__ - INFO - Bootstrapped FID scores saved to bootstraped_fid_sd.npy
+2025-02-17 08:35:33,647 - __main__ - INFO - Normality test (SD)
+2025-02-17 08:35:33,647 - __main__ - INFO - Normality test (SD): True, details: {'statistic': 0.9974450306174784, 'p_value': 0.6420834098641631, 'normal': 'True'}
+2025-02-17 08:35:33,647 - __main__ - INFO - Performing statistical tests
+2025-02-17 08:35:33,647 - __main__ - INFO - Wilcoxon signed-rank test (OpenCV vs Lama)
+2025-02-17 08:35:33,649 - __main__ - INFO - p-value (OpenCV vs Lama): 1.802667094044925e-83, observed difference: 5.25031852722168
+2025-02-17 08:35:33,649 - __main__ - INFO - Wilcoxon signed-rank test (SD vs Lama)
+2025-02-17 08:35:33,649 - __main__ - INFO - p-value (SD vs Lama): 0.036968367855308736, observed difference: -0.19739532470703125
+2025-02-17 08:35:33,649 - __main__ - INFO - Wilcoxon signed-rank test (Lama vs SD)
+2025-02-17 08:35:33,650 - __main__ - INFO - p-value (Lama v): 0.036968367855308736, observed difference: 0.19739532470703125
+2025-02-17 08:35:33,650 - __main__ - INFO - Wilcoxon signed-rank test (OpenCV vs SD)
+2025-02-17 08:35:33,650 - __main__ - INFO - p-value (OpenCV vs SD): 1.8464844887589887e-83, observed difference: 5.394451141357422
+2025-02-17 08:35:33,650 - __main__ - INFO - Two-sided t-test (OpenCV vs Lama)
+2025-02-17 08:35:33,652 - __main__ - INFO - p-value (OpenCV vs Lama): 8.278916397489018e-278, observed difference: 5.133258468627922
+2025-02-17 08:35:33,652 - __main__ - INFO - Two-sided t-test (SD vs Lama)
+2025-02-17 08:35:33,653 - __main__ - INFO - p-value (SD vs Lama): 0.01585262540813553, observed difference: -0.22938246154785702
+2025-02-17 08:35:33,653 - __main__ - INFO - Two-sided t-test (Lama vs SD)
+2025-02-17 08:35:33,654 - __main__ - INFO - p-value (Lama vs SD): 0.01585262540813553, observed difference: 0.22938246154785702
+2025-02-17 08:35:33,654 - __main__ - INFO - Two-sided t-test (OpenCV vs SD)
+2025-02-17 08:35:33,654 - __main__ - INFO - p-value (OpenCV vs SD): 2.430100587046893e-291, observed difference: 5.362640930175779

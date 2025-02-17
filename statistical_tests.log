@@ -15,3 +15,7 @@
 2025-02-16 20:20:44,897 - __main__ - INFO - Normality test (Lama)
 2025-02-16 20:20:44,898 - __main__ - INFO - Normality test (Lama): True, details: {'statistic': 0.9975527601331395, 'p_value': 0.6799608874470291, 'normal': 'True'}
 2025-02-16 20:20:44,898 - __main__ - INFO - Calculating bootstrapped OpenCV
+2025-02-17 02:27:31,132 - __main__ - INFO - Bootstrapped FID scores saved to bootstraped_fid_opencv.npy
+2025-02-17 02:27:31,132 - __main__ - INFO - Normality test (OpenCV)
+2025-02-17 02:27:31,133 - __main__ - INFO - Normality test (OpenCV): True, details: {'statistic': 0.9987331764083414, 'p_value': 0.9798370540166224, 'normal': 'True'}
+2025-02-17 02:27:31,133 - __main__ - INFO - Calculating bootstrapped SD Inpaint

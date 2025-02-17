@@ -73,3 +73,12 @@
 2025-02-17 17:28:30,391 - __main__ - INFO - Loaded 1000 Lama images
 2025-02-17 17:28:30,391 - __main__ - INFO - Loaded 1000 OpenCV images
 2025-02-17 17:28:30,391 - __main__ - INFO - Loaded 1000 SD images
+2025-02-17 17:31:13,577 - __main__ - INFO - FID (Lama) Small Mask: 30.19165802001953
+2025-02-17 17:31:13,578 - __main__ - INFO - FID (Lama) Middle Mask: 45.19919967651367
+2025-02-17 17:31:13,578 - __main__ - INFO - FID (Lama) Big Mask: 93.07777404785156
+2025-02-17 17:31:13,578 - __main__ - INFO - FID (OpenCV) Small Mask: 30.239673614501953
+2025-02-17 17:31:13,578 - __main__ - INFO - FID (OpenCV) Middle Mask: 51.17277908325195
+2025-02-17 17:31:13,578 - __main__ - INFO - FID (OpenCV) Big Mask: 108.59081268310547
+2025-02-17 17:31:13,578 - __main__ - INFO - FID (SD) Small Mask: 36.738189697265625
+2025-02-17 17:31:13,578 - __main__ - INFO - FID (SD) Middle Mask: 49.20923614501953
+2025-02-17 17:31:13,578 - __main__ - INFO - FID (SD) Big Mask: 88.17733001708984

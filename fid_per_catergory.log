@@ -1,0 +1,75 @@
+2025-02-17 17:21:41,935 - __main__ - INFO - Found 1000 images in all directories
+2025-02-17 17:21:41,935 - __main__ - INFO - Loading the images
+2025-02-17 17:21:53,661 - __main__ - INFO - Loaded 100 Real images
+2025-02-17 17:21:53,662 - __main__ - INFO - Loaded 100 Lama images
+2025-02-17 17:21:53,662 - __main__ - INFO - Loaded 100 OpenCV images
+2025-02-17 17:21:53,662 - __main__ - INFO - Loaded 100 SD images
+2025-02-17 17:22:32,440 - __main__ - INFO - Found 1000 images in all directories
+2025-02-17 17:22:32,441 - __main__ - INFO - Loading the images
+2025-02-17 17:22:43,954 - __main__ - INFO - Loaded 100 Real images
+2025-02-17 17:22:43,954 - __main__ - INFO - Loaded 100 Lama images
+2025-02-17 17:22:43,954 - __main__ - INFO - Loaded 100 OpenCV images
+2025-02-17 17:22:43,954 - __main__ - INFO - Loaded 100 SD images
+2025-02-17 17:23:12,105 - __main__ - INFO - FID (Lama) Small Mask: 42.21080780029297
+2025-02-17 17:23:12,105 - __main__ - INFO - FID (Lama) Middle Mask: 62.3987922668457
+2025-02-17 17:23:12,105 - __main__ - INFO - FID (Lama) Big Mask: 171.03958129882812
+2025-02-17 17:23:12,105 - __main__ - INFO - FID (OpenCV) Small Mask: 39.33544158935547
+2025-02-17 17:23:12,105 - __main__ - INFO - FID (OpenCV) Middle Mask: 80.3125991821289
+2025-02-17 17:23:12,105 - __main__ - INFO - FID (OpenCV) Big Mask: 192.89781188964844
+2025-02-17 17:23:12,105 - __main__ - INFO - FID (SD) Small Mask: 51.94587326049805
+2025-02-17 17:23:12,105 - __main__ - INFO - FID (SD) Middle Mask: 73.8427505493164
+2025-02-17 17:23:12,105 - __main__ - INFO - FID (SD) Big Mask: 182.8084716796875
+2025-02-17 17:23:26,743 - __main__ - INFO - Bootstrap FID (Lama) Small Mask: [138.48368835 113.16860199 153.91317749 124.7317276  169.4311676 ]
+2025-02-17 17:23:26,743 - __main__ - INFO - Saved bootstrapped FID (Lama) Small Mask to fid_lama_small.npy
+2025-02-17 17:23:26,744 - __main__ - INFO - Normality test for FID (Lama) Small Mask: True
+2025-02-17 17:23:42,041 - __main__ - INFO - Bootstrap FID (Lama) Middle Mask: [193.61045837 190.25331116 172.56758118 186.50588989 163.58644104]
+2025-02-17 17:23:42,042 - __main__ - INFO - Saved bootstrapped FID (Lama) Middle Mask to fid_lama_middle.npy
+2025-02-17 17:23:42,042 - __main__ - INFO - Normality test for FID (Lama) Middle Mask: True
+2025-02-17 17:23:56,756 - __main__ - INFO - Bootstrap FID (Lama) Big Mask: [246.36206055 243.00975037 223.83872986 258.28320312 248.87902832]
+2025-02-17 17:23:56,756 - __main__ - INFO - Saved bootstrapped FID (Lama) Big Mask to fid_lama_big.npy
+2025-02-17 17:23:56,756 - __main__ - INFO - Normality test for FID (Lama) Big Mask: True
+2025-02-17 17:24:11,861 - __main__ - INFO - Bootstrap FID (OpenCV) Small Mask: [115.24023438 164.76902771 150.22427368 144.93605042 139.70228577]
+2025-02-17 17:24:11,861 - __main__ - INFO - Saved bootstrapped FID (OpenCV) Small Mask to fid_opencv_small.npy
+2025-02-17 17:24:11,861 - __main__ - INFO - Normality test for FID (OpenCV) Small Mask: True
+2025-02-17 17:24:26,848 - __main__ - INFO - Bootstrap FID (OpenCV) Middle Mask: [161.12509155 162.64328003 147.2328186  172.37597656 224.54541016]
+2025-02-17 17:24:26,848 - __main__ - INFO - Saved bootstrapped FID (OpenCV) Middle Mask to fid_opencv_middle.npy
+2025-02-17 17:24:26,849 - __main__ - INFO - Normality test for FID (OpenCV) Middle Mask: True
+2025-02-17 17:24:42,051 - __main__ - INFO - Bootstrap FID (OpenCV) Big Mask: [241.64215088 250.72767639 258.89544678 270.56604004 272.54525757]
+2025-02-17 17:24:42,052 - __main__ - INFO - Saved bootstrapped FID (OpenCV) Big Mask to fid_opencv_big.npy
+2025-02-17 17:24:42,052 - __main__ - INFO - Normality test for FID (OpenCV) Big Mask: True
+2025-02-17 17:24:56,984 - __main__ - INFO - Bootstrap FID (SD) Small Mask: [151.02639771 147.25535583 120.70385742 153.18504333 150.41217041]
+2025-02-17 17:24:56,985 - __main__ - INFO - Saved bootstrapped FID (SD) Small Mask to fid_sd_small.npy
+2025-02-17 17:24:56,985 - __main__ - INFO - Normality test for FID (SD) Small Mask: False
+2025-02-17 17:25:11,742 - __main__ - INFO - Bootstrap FID (SD) Middle Mask: [151.46061707 180.43623352 175.75813293 152.75613403 163.0990448 ]
+2025-02-17 17:25:11,743 - __main__ - INFO - Saved bootstrapped FID (SD) Middle Mask to fid_sd_middle.npy
+2025-02-17 17:25:11,743 - __main__ - INFO - Normality test for FID (SD) Middle Mask: True
+2025-02-17 17:25:26,813 - __main__ - INFO - Bootstrap FID (SD) Big Mask: [282.86785889 287.07592773 269.66036987 236.07023621 275.57540894]
+2025-02-17 17:25:26,814 - __main__ - INFO - Saved bootstrapped FID (SD) Big Mask to fid_sd_big.npy
+2025-02-17 17:25:26,814 - __main__ - INFO - Normality test for FID (SD) Big Mask: True
+2025-02-17 17:25:26,814 - __main__ - INFO - Performing statistical tests
+2025-02-17 17:25:26,815 - __main__ - INFO - Wilcoxon signed-rank test between OpenCV and Lama Small Mask: p-value = 1.0, observed difference = -3.68890380859375
+2025-02-17 17:25:26,816 - __main__ - INFO - Wilcoxon signed-rank test between OpenCV and Lama Middle Mask: p-value = 0.625, observed difference = -25.334762573242188
+2025-02-17 17:25:26,816 - __main__ - INFO - Wilcoxon signed-rank test between OpenCV and Lama Big Mask: p-value = 0.125, observed difference = 12.2828369140625
+2025-02-17 17:25:26,818 - __main__ - INFO - Two-sided t-test between OpenCV and Lama Small Mask: p-value = 0.8204856197358236, observed difference = 3.0287017822265625
+2025-02-17 17:25:26,819 - __main__ - INFO - Two-sided t-test between OpenCV and Lama Middle Mask: p-value = 0.6160516493599999, observed difference = -7.720220947265602
+2025-02-17 17:25:26,819 - __main__ - INFO - Two-sided t-test between OpenCV and Lama Big Mask: p-value = 0.10686191356898338, observed difference = 14.800759887695335
+2025-02-17 17:25:26,820 - __main__ - INFO - Wilcoxon signed-rank test between SD and Lama Small Mask: p-value = 0.8125, observed difference = 12.542709350585938
+2025-02-17 17:25:26,821 - __main__ - INFO - Wilcoxon signed-rank test between SD and Lama Middle Mask: p-value = 0.1875, observed difference = -9.81707763671875
+2025-02-17 17:25:26,822 - __main__ - INFO - Wilcoxon signed-rank test between SD and Lama Big Mask: p-value = 0.125, observed difference = 36.50579833984375
+2025-02-17 17:25:26,822 - __main__ - INFO - Two-sided t-test between SD and Lama Small Mask: p-value = 0.7086318299527218, observed difference = 4.570892333984375
+2025-02-17 17:25:26,823 - __main__ - INFO - Two-sided t-test between SD and Lama Middle Mask: p-value = 0.07702101974249229, observed difference = -16.602703857421858
+2025-02-17 17:25:26,824 - __main__ - INFO - Two-sided t-test between SD and Lama Big Mask: p-value = 0.04545631348869147, observed difference = 26.17540588378904
+2025-02-17 17:25:26,825 - __main__ - INFO - Wilcoxon signed-rank test between SD and OpenCV Small Mask: p-value = 1.0, observed difference = 8.248992919921875
+2025-02-17 17:25:26,826 - __main__ - INFO - Wilcoxon signed-rank test between SD and OpenCV Middle Mask: p-value = 0.8125, observed difference = -9.664474487304688
+2025-02-17 17:25:26,826 - __main__ - INFO - Wilcoxon signed-rank test between SD and OpenCV Big Mask: p-value = 0.3125, observed difference = 10.764923095703125
+2025-02-17 17:25:26,827 - __main__ - INFO - Two-sided t-test between SD and OpenCV Small Mask: p-value = 0.8826668915219911, observed difference = 1.5421905517578125
+2025-02-17 17:25:26,828 - __main__ - INFO - Two-sided t-test between SD and OpenCV Middle Mask: p-value = 0.5669982537421228, observed difference = -8.882482910156256
+2025-02-17 17:25:26,829 - __main__ - INFO - Two-sided t-test between SD and OpenCV Big Mask: p-value = 0.3273271228523872, observed difference = 11.374645996093705
+2025-02-17 17:27:50,019 - __main__ - INFO - Found 1000 images in all directories
+2025-02-17 17:27:50,019 - __main__ - INFO - Loading the images
+2025-02-17 17:28:18,734 - __main__ - INFO - Found 1000 images in all directories
+2025-02-17 17:28:18,734 - __main__ - INFO - Loading the images
+2025-02-17 17:28:30,391 - __main__ - INFO - Loaded 1000 Real images
+2025-02-17 17:28:30,391 - __main__ - INFO - Loaded 1000 Lama images
+2025-02-17 17:28:30,391 - __main__ - INFO - Loaded 1000 OpenCV images
+2025-02-17 17:28:30,391 - __main__ - INFO - Loaded 1000 SD images

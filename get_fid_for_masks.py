@@ -187,7 +187,6 @@ if __name__ == "__main__":
 
     # Calculate the FID score using bootstrapping
     fid_score_lama_small_bootstrap = bootstrap_fid(real_images_tensor_small, lama_images_tensor_small, N_BOOTSTRAPS)
-    logger.info(f"Bootstrap FID (Lama) Small Mask: {fid_score_lama_small_bootstrap}")
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_lama_small.npy", fid_score_lama_small_bootstrap)
     logger.info("Saved bootstrapped FID (Lama) Small Mask to fid_lama_small.npy")
@@ -197,7 +196,6 @@ if __name__ == "__main__":
 
 
     fid_score_lama_middle_bootstrap = bootstrap_fid(real_images_tensor_middle, lama_images_tensor_middle, N_BOOTSTRAPS)
-    logger.info(f"Bootstrap FID (Lama) Middle Mask: {fid_score_lama_middle_bootstrap}")
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_lama_middle.npy", fid_score_lama_middle_bootstrap)
     logger.info("Saved bootstrapped FID (Lama) Middle Mask to fid_lama_middle.npy")
@@ -207,7 +205,6 @@ if __name__ == "__main__":
 
 
     fid_score_lama_big_bootstrap = bootstrap_fid(real_images_tensor_big, lama_images_tensor_big, N_BOOTSTRAPS)
-    logger.info(f"Bootstrap FID (Lama) Big Mask: {fid_score_lama_big_bootstrap}")
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_lama_big.npy", fid_score_lama_big_bootstrap)
     logger.info("Saved bootstrapped FID (Lama) Big Mask to fid_lama_big.npy")
@@ -216,7 +213,6 @@ if __name__ == "__main__":
     logger.info(f"Normality test for FID (Lama) Big Mask: {lama_big_normality}")
 
     fid_score_opencv_small_bootstrap = bootstrap_fid(real_images_tensor_small, opencv_images_tensor_small, N_BOOTSTRAPS)
-    logger.info(f"Bootstrap FID (OpenCV) Small Mask: {fid_score_opencv_small_bootstrap}")
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_opencv_small.npy", fid_score_opencv_small_bootstrap)
     logger.info("Saved bootstrapped FID (OpenCV) Small Mask to fid_opencv_small.npy")
@@ -226,7 +222,6 @@ if __name__ == "__main__":
 
 
     fid_score_opencv_middle_bootstrap = bootstrap_fid(real_images_tensor_middle, opencv_images_tensor_middle, N_BOOTSTRAPS)
-    logger.info(f"Bootstrap FID (OpenCV) Middle Mask: {fid_score_opencv_middle_bootstrap}")
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_opencv_middle.npy", fid_score_opencv_middle_bootstrap)
     logger.info("Saved bootstrapped FID (OpenCV) Middle Mask to fid_opencv_middle.npy")
@@ -236,7 +231,6 @@ if __name__ == "__main__":
 
 
     fid_score_opencv_big_bootstrap = bootstrap_fid(real_images_tensor_big, opencv_images_tensor_big, N_BOOTSTRAPS)
-    logger.info(f"Bootstrap FID (OpenCV) Big Mask: {fid_score_opencv_big_bootstrap}")
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_opencv_big.npy", fid_score_opencv_big_bootstrap)
     logger.info("Saved bootstrapped FID (OpenCV) Big Mask to fid_opencv_big.npy")
@@ -246,7 +240,6 @@ if __name__ == "__main__":
 
 
     fid_score_sd_small_bootstrap = bootstrap_fid(real_images_tensor_small, sd_images_tensor_small, N_BOOTSTRAPS)
-    logger.info(f"Bootstrap FID (SD) Small Mask: {fid_score_sd_small_bootstrap}")
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_sd_small.npy", fid_score_sd_small_bootstrap)
     logger.info("Saved bootstrapped FID (SD) Small Mask to fid_sd_small.npy")
@@ -255,7 +248,6 @@ if __name__ == "__main__":
     logger.info(f"Normality test for FID (SD) Small Mask: {sd_small_normality}")
 
     fid_score_sd_middle_bootstrap = bootstrap_fid(real_images_tensor_middle, sd_images_tensor_middle, N_BOOTSTRAPS)
-    logger.info(f"Bootstrap FID (SD) Middle Mask: {fid_score_sd_middle_bootstrap}")
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_sd_middle.npy", fid_score_sd_middle_bootstrap)
     logger.info("Saved bootstrapped FID (SD) Middle Mask to fid_sd_middle.npy")
@@ -264,7 +256,6 @@ if __name__ == "__main__":
     logger.info(f"Normality test for FID (SD) Middle Mask: {sd_middle_normality}")
 
     fid_score_sd_big_bootstrap = bootstrap_fid(real_images_tensor_big, sd_images_tensor_big, N_BOOTSTRAPS)
-    logger.info(f"Bootstrap FID (SD) Big Mask: {fid_score_sd_big_bootstrap}")
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_sd_big.npy", fid_score_sd_big_bootstrap)
     logger.info("Saved bootstrapped FID (SD) Big Mask to fid_sd_big.npy")

@@ -27,3 +27,5 @@
 2025-02-18 08:07:05,154 - __main__ - INFO - Normality test for FID (OpenCV) Big Mask: True
 2025-02-18 10:16:05,238 - __main__ - INFO - Saved bootstrapped FID (SD) Small Mask to fid_sd_small.npy
 2025-02-18 10:16:05,239 - __main__ - INFO - Normality test for FID (SD) Small Mask: True
+2025-02-18 12:30:49,225 - __main__ - INFO - Saved bootstrapped FID (SD) Middle Mask to fid_sd_middle.npy
+2025-02-18 12:30:49,226 - __main__ - INFO - Normality test for FID (SD) Middle Mask: True

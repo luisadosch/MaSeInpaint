@@ -106,27 +106,22 @@ def bootstrap_fid(real_images_tensor, infilled_images_tensor, n_bootstraps=5):
 
     Args:
     - real_images_tensor (tensor): Tensor of real images (shape: [N, C, H, W]).
-    - infilled_images_tensor (list of PIL Images): List of generated images.
+    - infilled_images_tensor (tensor): Tensor of infilled images (shape: [N, C, H, W]).
     - n_bootstraps (int): Number of bootstrap iterations.
 
     Returns:
-    - mean_fid (float): Mean FID score across bootstrap samples.
-    - ci (tuple): 95% confidence interval (lower, upper) of the FID.
-    - fid_scores (np.array): Array of all bootstrap FID scores.
+    - np.array: Array of bootstrapped FID scores.
     """
     fid_scores = []
-    n_real = real_images_tensor.shape[0]       # Assuming batch dimension is the first
-    n_infilled = len(infilled_images_tensor)     # Number of generated images
+    n_images = real_images_tensor.shape[0]       # Assuming batch dimension is the first
     
     for _ in range(n_bootstraps):
         # Sample indices with replacement for real images
-        real_indices = np.random.choice(n_real, n_real, replace=True)
-        # Sample indices with replacement for generated images
-        infilled_indices = np.random.choice(n_infilled, n_infilled, replace=True)
+        indices = np.random.choice(n_images, n_images, replace=True)
         
         # Create bootstrap samples
-        real_sample = real_images_tensor[real_indices]
-        infilled_sample = infilled_images_tensor[infilled_indices] 
+        real_sample = real_images_tensor[indices]
+        infilled_sample = infilled_images_tensor[indices] 
         
         # Compute the FID score for these samples
         fid_value = calculate_fid(real_sample, infilled_sample)
@@ -331,6 +326,7 @@ if __name__ == "__main__":
     # Save the bootstrapped FID scores to a file
     np.save("bootstraped_fid_lama.npy", bootstraped_fid_lama)
     logger.info("Bootstrapped FID scores saved to bootstraped_fid_lama.npy")
+    logger.info(f"Bootstrapped mean FID (Lama): {np.mean(bootstraped_fid_lama)}, std: {np.std(bootstraped_fid_lama)}")
 
     # Check if the bootstrapped FID scores are normally distributed
     logger.info("Normality test (Lama)")
@@ -341,17 +337,20 @@ if __name__ == "__main__":
     bootstraped_fid_opencv = bootstrap_fid(real_images_tensor, opencv_images_tensor, n_bootstraps=N_BOOTSTRAPS)
     np.save("bootstraped_fid_opencv.npy", bootstraped_fid_opencv)
     logger.info("Bootstrapped FID scores saved to bootstraped_fid_opencv.npy")
+    logger.info(f"Bootstrapped mean FID (OpenCV): {np.mean(bootstraped_fid_opencv)}, std: {np.std(bootstraped_fid_opencv)}")
 
     # Check if the bootstrapped FID scores are normally distributed
     logger.info("Normality test (OpenCV)")
     normal_opencv, details_opencv = check_normality(bootstraped_fid_opencv)
     logger.info(f"Normality test (OpenCV): {normal_opencv}, details: {details_opencv}")
+    logger.info(f"Bootstrapped mean FID (OpenCV): {np.mean(bootstraped_fid_opencv)}, std: {np.std(bootstraped_fid_opencv)}")
 
 
     logger.info("Calculating bootstrapped SD Inpaint")
     bootstraped_fid_sd = bootstrap_fid(real_images_tensor, sd_images_tensor, n_bootstraps=N_BOOTSTRAPS)
     np.save("bootstraped_fid_sd.npy", bootstraped_fid_sd)
     logger.info("Bootstrapped FID scores saved to bootstraped_fid_sd.npy")
+    logger.info(f"Bootstrapped mean FID (SD): {np.mean(bootstraped_fid_sd)}, std: {np.std(bootstraped_fid_sd)}")
 
 
     # Check if the bootstrapped FID scores are normally distributed
@@ -402,6 +401,11 @@ if __name__ == "__main__":
 
     # Save the results to a file alltests (including normality tests)
     results = {
+        "bootstrapped_fid": {
+            "lama": {"mean": np.mean(bootstraped_fid_lama), "std": np.std(bootstraped_fid_lama)},
+            "opencv": {"mean": np.mean(bootstraped_fid_opencv), "std": np.std(bootstraped_fid_opencv)},
+            "sd": {"mean": np.mean(bootstraped_fid_sd), "std": np.std(bootstraped_fid_sd)}
+        },
         "normality": {
             "lama":  details_lama,
             "opencv":  details_opencv,

@@ -50,7 +50,7 @@ if __name__ == "__main__":
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.INFO)
 
-    file_handler = logging.FileHandler("fid_per_catergory.log")
+    file_handler = logging.FileHandler("statistical_tests_by_category.log")
     file_handler.setLevel(logging.INFO)
 
     # Create formatters and add them to the handlers
@@ -157,17 +157,6 @@ if __name__ == "__main__":
     fid_score_sd_middle = calculate_fid(real_images_tensor_middle, sd_images_tensor_middle)
     fid_score_sd_big = calculate_fid(real_images_tensor_big, sd_images_tensor_big)
 
-    logger.info(f"FID (Lama) Small Mask: {fid_score_lama_small}")
-    logger.info(f"FID (Lama) Middle Mask: {fid_score_lama_middle}")
-    logger.info(f"FID (Lama) Big Mask: {fid_score_lama_big}")
-
-    logger.info(f"FID (OpenCV) Small Mask: {fid_score_opencv_small}")
-    logger.info(f"FID (OpenCV) Middle Mask: {fid_score_opencv_middle}")
-    logger.info(f"FID (OpenCV) Big Mask: {fid_score_opencv_big}")
-
-    logger.info(f"FID (SD) Small Mask: {fid_score_sd_small}")
-    logger.info(f"FID (SD) Middle Mask: {fid_score_sd_middle}")
-    logger.info(f"FID (SD) Big Mask: {fid_score_sd_big}")
 
     # Store the FID scores in a dictionary and save the dictionary to a file
     fid_scores = {
@@ -182,7 +171,7 @@ if __name__ == "__main__":
         "sd_big": fid_score_sd_big,
     }
 
-    with open("get_fid_by_category.json", "w") as f:
+    with open("fid_by_category.json", "w") as f:
         json.dump(fid_scores, f)
 
     # Calculate the FID score using bootstrapping
@@ -190,6 +179,8 @@ if __name__ == "__main__":
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_lama_small.npy", fid_score_lama_small_bootstrap)
     logger.info("Saved bootstrapped FID (Lama) Small Mask to fid_lama_small.npy")
+    logger.info(f"Mean FID (Lama) Small Mask: {np.mean(fid_score_lama_small_bootstrap)}, std: {np.std(fid_score_lama_small_bootstrap)}")
+
     #Check normality
     lama_small_normality, lama_small_normality_details = check_normality(fid_score_lama_small_bootstrap)
     logger.info(f"Normality test for FID (Lama) Small Mask: {lama_small_normality}")
@@ -199,6 +190,8 @@ if __name__ == "__main__":
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_lama_middle.npy", fid_score_lama_middle_bootstrap)
     logger.info("Saved bootstrapped FID (Lama) Middle Mask to fid_lama_middle.npy")
+    logger.info(f"Mean FID (Lama) Middle Mask: {np.mean(fid_score_lama_middle_bootstrap)}, std: {np.std(fid_score_lama_middle_bootstrap)}")
+
     #Check normality
     lama_middle_normality, lama_middle_normality_details = check_normality(fid_score_lama_middle_bootstrap)
     logger.info(f"Normality test for FID (Lama) Middle Mask: {lama_middle_normality}")
@@ -208,6 +201,8 @@ if __name__ == "__main__":
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_lama_big.npy", fid_score_lama_big_bootstrap)
     logger.info("Saved bootstrapped FID (Lama) Big Mask to fid_lama_big.npy")
+    logger.info(f"Mean FID (Lama) Big Mask: {np.mean(fid_score_lama_big_bootstrap)}, std: {np.std(fid_score_lama_big_bootstrap)}")
+
     #Check normality
     lama_big_normality, lama_big_normality_details = check_normality(fid_score_lama_big_bootstrap)
     logger.info(f"Normality test for FID (Lama) Big Mask: {lama_big_normality}")
@@ -216,6 +211,8 @@ if __name__ == "__main__":
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_opencv_small.npy", fid_score_opencv_small_bootstrap)
     logger.info("Saved bootstrapped FID (OpenCV) Small Mask to fid_opencv_small.npy")
+    logger.info(f"Mean FID (OpenCV) Small Mask: {np.mean(fid_score_opencv_small_bootstrap)}, std: {np.std(fid_score_opencv_small_bootstrap)}")
+
     #Check normality
     opencv_small_normality, opencv_small_normality_details = check_normality(fid_score_opencv_small_bootstrap)
     logger.info(f"Normality test for FID (OpenCV) Small Mask: {opencv_small_normality}")
@@ -225,6 +222,9 @@ if __name__ == "__main__":
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_opencv_middle.npy", fid_score_opencv_middle_bootstrap)
     logger.info("Saved bootstrapped FID (OpenCV) Middle Mask to fid_opencv_middle.npy")
+    logger.info(f"Mean FID (OpenCV) Middle Mask: {np.mean(fid_score_opencv_middle_bootstrap)}, std: {np.std(fid_score_opencv_middle_bootstrap)}")
+
+
     #Check normality
     opencv_middle_normality, opencv_middle_normality_details = check_normality(fid_score_opencv_middle_bootstrap)
     logger.info(f"Normality test for FID (OpenCV) Middle Mask: {opencv_middle_normality}")
@@ -243,6 +243,9 @@ if __name__ == "__main__":
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_sd_small.npy", fid_score_sd_small_bootstrap)
     logger.info("Saved bootstrapped FID (SD) Small Mask to fid_sd_small.npy")
+    logger.info(f"Mean FID (SD) Small Mask: {np.mean(fid_score_sd_small_bootstrap)}, std: {np.std(fid_score_sd_small_bootstrap)}")
+
+
     #Check normality
     sd_small_normality, sd_small_normality_details = check_normality(fid_score_sd_small_bootstrap)
     logger.info(f"Normality test for FID (SD) Small Mask: {sd_small_normality}")
@@ -251,6 +254,8 @@ if __name__ == "__main__":
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_sd_middle.npy", fid_score_sd_middle_bootstrap)
     logger.info("Saved bootstrapped FID (SD) Middle Mask to fid_sd_middle.npy")
+    logger.info(f"Mean FID (SD) Middle Mask: {np.mean(fid_score_sd_middle_bootstrap)}, std: {np.std(fid_score_sd_middle_bootstrap)}")
+
     #Check normality
     sd_middle_normality, sd_middle_normality_details = check_normality(fid_score_sd_middle_bootstrap)
     logger.info(f"Normality test for FID (SD) Middle Mask: {sd_middle_normality}")
@@ -259,6 +264,9 @@ if __name__ == "__main__":
     # Save the bootstrapped FID score to a numpy file
     np.save("fid_sd_big.npy", fid_score_sd_big_bootstrap)
     logger.info("Saved bootstrapped FID (SD) Big Mask to fid_sd_big.npy")
+    logger.info(f"Mean FID (SD) Big Mask: {np.mean(fid_score_sd_big_bootstrap)}, std: {np.std(fid_score_sd_big_bootstrap)}")
+
+
     #Check normality
     sd_big_normality, sd_big_normality_details = check_normality(fid_score_sd_big_bootstrap)
     logger.info(f"Normality test for FID (SD) Big Mask: {sd_big_normality}")

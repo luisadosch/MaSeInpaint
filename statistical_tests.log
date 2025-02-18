@@ -39,3 +39,61 @@
 2025-02-17 08:35:33,654 - __main__ - INFO - p-value (Lama vs SD): 0.01585262540813553, observed difference: 0.22938246154785702
 2025-02-17 08:35:33,654 - __main__ - INFO - Two-sided t-test (OpenCV vs SD)
 2025-02-17 08:35:33,654 - __main__ - INFO - p-value (OpenCV vs SD): 2.430100587046893e-291, observed difference: 5.362640930175779
+2025-02-18 19:52:48,148 - __main__ - INFO - Running statistical tests (TEST=True)
+2025-02-18 19:52:48,553 - __main__ - INFO - Found 1000 images in all directories
+2025-02-18 19:52:48,553 - __main__ - INFO - Loading the images
+2025-02-18 19:53:02,773 - __main__ - INFO - Loaded 1000 Real images
+2025-02-18 19:53:02,773 - __main__ - INFO - Loaded 1000 Lama images
+2025-02-18 19:53:02,773 - __main__ - INFO - Loaded 1000 OpenCV images
+2025-02-18 19:53:02,773 - __main__ - INFO - Loaded 1000 SD images
+2025-02-18 19:53:16,311 - __main__ - INFO - FID (Lama): 79.3671875
+2025-02-18 19:53:16,311 - __main__ - INFO - FID (OpenCV): 89.97029113769531
+2025-02-18 19:53:16,311 - __main__ - INFO - FID (SD): 85.03580474853516
+2025-02-18 19:53:16,311 - __main__ - INFO - FID scores saved to fid_scores.json
+2025-02-18 19:53:16,311 - __main__ - INFO - Calculating bootstrapped FID scores and performing statistical tests
+2025-02-18 19:53:16,311 - __main__ - INFO - Calculating bootstrapped FID Lama
+2025-02-18 19:53:36,970 - __main__ - INFO - Bootstrapped FID scores saved to bootstraped_fid_lama.npy
+2025-02-18 19:53:36,970 - __main__ - INFO - Bootstrapped mean FID (Lama): 81.06025390625, std: 5.009490894727306
+2025-02-18 19:53:36,970 - __main__ - INFO - Normality test (Lama)
+2025-02-18 19:53:36,970 - __main__ - INFO - Normality test (Lama): True, details: {'statistic': 0.9646468136453585, 'p_value': 0.8399106384339806, 'normal': 'True'}
+2025-02-18 19:53:36,970 - __main__ - INFO - Calculating bootstrapped OpenCV
+2025-02-18 19:53:58,102 - __main__ - INFO - Bootstrapped FID scores saved to bootstraped_fid_opencv.npy
+2025-02-18 19:53:58,102 - __main__ - INFO - Bootstrapped mean FID (OpenCV): 91.62614135742187, std: 3.5529643877130317
+2025-02-18 19:53:58,102 - __main__ - INFO - Normality test (OpenCV)
+2025-02-18 19:53:58,102 - __main__ - INFO - Normality test (OpenCV): True, details: {'statistic': 0.8603790688867831, 'p_value': 0.22961255477892423, 'normal': 'True'}
+2025-02-18 19:53:58,102 - __main__ - INFO - Bootstrapped mean FID (OpenCV): 91.62614135742187, std: 3.5529643877130317
+2025-02-18 19:53:58,103 - __main__ - INFO - Calculating bootstrapped SD Inpaint
+2025-02-18 19:54:17,957 - __main__ - INFO - Bootstrapped FID scores saved to bootstraped_fid_sd.npy
+2025-02-18 19:54:17,957 - __main__ - INFO - Bootstrapped mean FID (SD): 88.81620941162109, std: 4.3351150337292825
+2025-02-18 19:54:17,957 - __main__ - INFO - Normality test (SD)
+2025-02-18 19:54:17,958 - __main__ - INFO - Normality test (SD): True, details: {'statistic': 0.9218916621338166, 'p_value': 0.5422159432074816, 'normal': 'True'}
+2025-02-18 19:54:17,958 - __main__ - INFO - Performing statistical tests
+2025-02-18 19:54:17,958 - __main__ - INFO - Wilcoxon signed-rank test (OpenCV vs Lama)
+2025-02-18 19:54:17,959 - __main__ - INFO - p-value (OpenCV vs Lama): 0.0625, observed difference: 10.765617370605469
+2025-02-18 19:54:17,959 - __main__ - INFO - Wilcoxon signed-rank test (SD vs Lama)
+2025-02-18 19:54:17,960 - __main__ - INFO - p-value (SD vs Lama): 0.125, observed difference: 3.1677932739257812
+2025-02-18 19:54:17,960 - __main__ - INFO - Wilcoxon signed-rank test (Lama vs SD)
+2025-02-18 19:54:17,961 - __main__ - INFO - p-value (Lama v): 0.125, observed difference: -3.1677932739257812
+2025-02-18 19:54:17,961 - __main__ - INFO - Wilcoxon signed-rank test (OpenCV vs SD)
+2025-02-18 19:54:17,961 - __main__ - INFO - p-value (OpenCV vs SD): 0.8125, observed difference: -0.11586761474609375
+2025-02-18 19:54:17,961 - __main__ - INFO - Two-sided t-test (OpenCV vs Lama)
+2025-02-18 19:54:17,963 - __main__ - INFO - p-value (OpenCV vs Lama): 0.010336601126023212, observed difference: 10.565887451171875
+2025-02-18 19:54:17,963 - __main__ - INFO - Two-sided t-test (SD vs Lama)
+2025-02-18 19:54:17,964 - __main__ - INFO - p-value (SD vs Lama): 0.047940450711183365, observed difference: 7.755955505371091
+2025-02-18 19:54:17,964 - __main__ - INFO - Two-sided t-test (Lama vs SD)
+2025-02-18 19:54:17,965 - __main__ - INFO - p-value (Lama vs SD): 0.047940450711183365, observed difference: -7.755955505371091
+2025-02-18 19:54:17,965 - __main__ - INFO - Two-sided t-test (OpenCV vs SD)
+2025-02-18 19:54:17,966 - __main__ - INFO - p-value (OpenCV vs SD): 0.34648622892859954, observed difference: 2.809931945800784
+2025-02-18 19:59:11,114 - __main__ - INFO - Running statistical tests (TEST=False)
+2025-02-18 19:59:11,525 - __main__ - INFO - Found 1000 images in all directories
+2025-02-18 19:59:11,525 - __main__ - INFO - Loading the images
+2025-02-18 19:59:25,774 - __main__ - INFO - Loaded 1000 Real images
+2025-02-18 19:59:25,774 - __main__ - INFO - Loaded 1000 Lama images
+2025-02-18 19:59:25,774 - __main__ - INFO - Loaded 1000 OpenCV images
+2025-02-18 19:59:25,774 - __main__ - INFO - Loaded 1000 SD images
+2025-02-18 20:02:52,876 - __main__ - INFO - FID (Lama): 31.672792434692383
+2025-02-18 20:02:52,876 - __main__ - INFO - FID (OpenCV): 37.10226058959961
+2025-02-18 20:02:52,876 - __main__ - INFO - FID (SD): 32.127830505371094
+2025-02-18 20:02:52,877 - __main__ - INFO - FID scores saved to fid_scores.json
+2025-02-18 20:02:52,877 - __main__ - INFO - Calculating bootstrapped FID scores and performing statistical tests
+2025-02-18 20:02:52,877 - __main__ - INFO - Calculating bootstrapped FID Lama

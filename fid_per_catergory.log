@@ -29,3 +29,24 @@
 2025-02-18 10:16:05,239 - __main__ - INFO - Normality test for FID (SD) Small Mask: True
 2025-02-18 12:30:49,225 - __main__ - INFO - Saved bootstrapped FID (SD) Middle Mask to fid_sd_middle.npy
 2025-02-18 12:30:49,226 - __main__ - INFO - Normality test for FID (SD) Middle Mask: True
+2025-02-18 14:50:12,646 - __main__ - INFO - Saved bootstrapped FID (SD) Big Mask to fid_sd_big.npy
+2025-02-18 14:50:12,646 - __main__ - INFO - Normality test for FID (SD) Big Mask: True
+2025-02-18 14:50:12,646 - __main__ - INFO - Performing statistical tests
+2025-02-18 14:50:12,647 - __main__ - INFO - Wilcoxon signed-rank test between OpenCV and Lama Small Mask: p-value = 0.5247280158456833, observed difference = -0.014293670654296875
+2025-02-18 14:50:12,648 - __main__ - INFO - Wilcoxon signed-rank test between OpenCV and Lama Middle Mask: p-value = 4.213576486645846e-55, observed difference = 4.523475646972656
+2025-02-18 14:50:12,648 - __main__ - INFO - Wilcoxon signed-rank test between OpenCV and Lama Big Mask: p-value = 1.2800120754180319e-83, observed difference = 13.865318298339844
+2025-02-18 14:50:12,650 - __main__ - INFO - Two-sided t-test between OpenCV and Lama Small Mask: p-value = 0.2641934113898878, observed difference = 0.28031336975097076
+2025-02-18 14:50:12,651 - __main__ - INFO - Two-sided t-test between OpenCV and Lama Middle Mask: p-value = 2.4640506759237545e-79, observed difference = 4.631151260375972
+2025-02-18 14:50:12,651 - __main__ - INFO - Two-sided t-test between OpenCV and Lama Big Mask: p-value = 1.3397888416822715e-308, observed difference = 13.912266921997059
+2025-02-18 14:50:12,652 - __main__ - INFO - Wilcoxon signed-rank test between SD and Lama Small Mask: p-value = 8.19204468819197e-37, observed difference = 3.502552032470703
+2025-02-18 14:50:12,653 - __main__ - INFO - Wilcoxon signed-rank test between SD and Lama Middle Mask: p-value = 1.1775002748600241e-16, observed difference = 2.0618515014648438
+2025-02-18 14:50:12,654 - __main__ - INFO - Wilcoxon signed-rank test between SD and Lama Big Mask: p-value = 2.0071431018035493e-61, observed difference = -5.604927062988281
+2025-02-18 14:50:12,655 - __main__ - INFO - Two-sided t-test between SD and Lama Small Mask: p-value = 8.882550148690056e-46, observed difference = 3.778031860351561
+2025-02-18 14:50:12,656 - __main__ - INFO - Two-sided t-test between SD and Lama Middle Mask: p-value = 2.3921238844808927e-18, observed difference = 2.057476257324211
+2025-02-18 14:50:12,657 - __main__ - INFO - Two-sided t-test between SD and Lama Big Mask: p-value = 4.137331187877415e-95, observed difference = -5.602355651855476
+2025-02-18 14:50:12,657 - __main__ - INFO - Wilcoxon signed-rank test between SD and OpenCV Small Mask: p-value = 6.718365108935876e-34, observed difference = 3.5228843688964844
+2025-02-18 14:50:12,658 - __main__ - INFO - Wilcoxon signed-rank test between SD and OpenCV Middle Mask: p-value = 3.498374854457692e-24, observed difference = -2.5535964965820312
+2025-02-18 14:50:12,658 - __main__ - INFO - Wilcoxon signed-rank test between SD and OpenCV Big Mask: p-value = 1.2647189486921487e-83, observed difference = -19.60718536376953
+2025-02-18 14:50:12,659 - __main__ - INFO - Two-sided t-test between SD and OpenCV Small Mask: p-value = 2.308252375391025e-41, observed difference = 3.4977184906005903
+2025-02-18 14:50:12,660 - __main__ - INFO - Two-sided t-test between SD and OpenCV Middle Mask: p-value = 1.970865750694844e-27, observed difference = -2.5736750030517612
+2025-02-18 14:50:12,661 - __main__ - INFO - Two-sided t-test between SD and OpenCV Big Mask: p-value = 0.0, observed difference = -19.514622573852535

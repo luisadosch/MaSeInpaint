@@ -14,3 +14,28 @@
 2025-02-19 19:47:00,402 - __main__ - INFO - Bootstrapped mean FID (Lama): 43.702967628479, std: 1.4286954765155568
 2025-02-19 19:47:00,402 - __main__ - INFO - Loaded bootstrapped FID OpenCV from bootstraped_fid_opencv.npy
 2025-02-19 19:47:00,402 - __main__ - INFO - Bootstrapped mean FID (OpenCV): 49.542882278442384, std: 1.6423827415303065
+2025-02-20 02:18:38,813 - __main__ - INFO - Bootstrapped FID SD computed and saved to bootstraped_fid_sd.npy
+2025-02-20 02:18:38,814 - __main__ - INFO - Bootstrapped mean FID (SD): 45.26276251983643, std: 1.2944255364015318
+2025-02-20 02:18:38,814 - __main__ - INFO - Normality test (Lama)
+2025-02-20 02:18:38,814 - __main__ - INFO - Normality test (Lama): True, details: {'statistic': 0.9970089060694641, 'p_value': 0.49409196337799177, 'normal': 'True'}
+2025-02-20 02:18:38,814 - __main__ - INFO - Normality test (OpenCV)
+2025-02-20 02:18:38,814 - __main__ - INFO - Normality test (OpenCV): True, details: {'statistic': 0.9978945425163687, 'p_value': 0.7965028852445921, 'normal': 'True'}
+2025-02-20 02:18:38,814 - __main__ - INFO - Normality test (SD)
+2025-02-20 02:18:38,814 - __main__ - INFO - Normality test (SD): True, details: {'statistic': 0.996993911558669, 'p_value': 0.48929755210170706, 'normal': 'True'}
+2025-02-20 02:18:38,814 - __main__ - INFO - Performing statistical tests
+2025-02-20 02:18:38,814 - __main__ - INFO - Wilcoxon signed-rank test (OpenCV vs Lama)
+2025-02-20 02:18:38,815 - __main__ - INFO - p-value (OpenCV vs Lama): 1.2647189486921487e-83, observed difference: 5.758842468261719
+2025-02-20 02:18:38,815 - __main__ - INFO - Wilcoxon signed-rank test (SD vs Lama)
+2025-02-20 02:18:38,816 - __main__ - INFO - p-value (SD vs Lama): 3.1596647066859406e-48, observed difference: 1.5489635467529297
+2025-02-20 02:18:38,816 - __main__ - INFO - Wilcoxon signed-rank test (Lama vs SD)
+2025-02-20 02:18:38,816 - __main__ - INFO - p-value (Lama vs SD): 3.1596647066859406e-48, observed difference: -1.5489635467529297
+2025-02-20 02:18:38,816 - __main__ - INFO - Wilcoxon signed-rank test (OpenCV vs SD)
+2025-02-20 02:18:38,817 - __main__ - INFO - p-value (OpenCV vs SD): 7.732896667433622e-83, observed difference: 4.369058609008789
+2025-02-20 02:18:38,817 - __main__ - INFO - Two-sided t-test (OpenCV vs Lama)
+2025-02-20 02:18:38,818 - __main__ - INFO - p-value (OpenCV vs Lama): 0.0, observed difference: 5.839914649963383
+2025-02-20 02:18:38,818 - __main__ - INFO - Two-sided t-test (SD vs Lama)
+2025-02-20 02:18:38,819 - __main__ - INFO - p-value (SD vs Lama): 2.6325672820135355e-63, observed difference: 1.559794891357427
+2025-02-20 02:18:38,819 - __main__ - INFO - Two-sided t-test (Lama vs SD)
+2025-02-20 02:18:38,820 - __main__ - INFO - p-value (Lama vs SD): 2.6325672820135355e-63, observed difference: -1.559794891357427
+2025-02-20 02:18:38,820 - __main__ - INFO - Two-sided t-test (OpenCV vs SD)
+2025-02-20 02:18:38,821 - __main__ - INFO - p-value (OpenCV vs SD): 7.931197764244599e-242, observed difference: 4.280119758605956

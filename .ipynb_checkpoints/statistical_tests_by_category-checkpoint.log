@@ -1,0 +1,10 @@
+2025-02-20 13:41:05,951 - __main__ - INFO - Found 1000 images in all directories
+2025-02-20 13:41:05,952 - __main__ - INFO - Loading the images
+2025-02-20 13:41:17,771 - __main__ - INFO - Loaded 1000 Real images
+2025-02-20 13:41:17,771 - __main__ - INFO - Loaded 1000 Lama images
+2025-02-20 13:41:17,771 - __main__ - INFO - Loaded 1000 OpenCV images
+2025-02-20 13:41:17,771 - __main__ - INFO - Loaded 1000 SD images
+2025-02-20 15:50:33,817 - __main__ - INFO - Computed and saved bootstrapped FID to fid_lama_small.npy
+2025-02-20 15:50:33,817 - __main__ - INFO - Mean FID from fid_lama_small.npy: 35.347263614654544, std: 2.3348372253276057
+2025-02-20 18:08:26,518 - __main__ - INFO - Computed and saved bootstrapped FID to fid_lama_middle.npy
+2025-02-20 18:08:26,518 - __main__ - INFO - Mean FID from fid_lama_middle.npy: 54.296609558105466, std: 2.6657574028695015

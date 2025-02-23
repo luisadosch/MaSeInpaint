@@ -121,7 +121,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run statistical tests on the inpainting results.")
     parser.add_argument("-t", "--test", type=str, default="False",
                         help="Set to 'True' to run the tests on a subset of images.")
-    parser.add_argument("-l", "--load_data", type=str, default="False",
+    parser.add_argument("-l", "--load_data", type=str, default="True",
                         help="Set to 'True' to load bootstrapped numpy files from file server if they exist, else calculate them.")
     args = parser.parse_args()
 

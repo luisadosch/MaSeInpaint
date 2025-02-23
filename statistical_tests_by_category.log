@@ -49,3 +49,54 @@
 2025-02-21 10:10:16,450 - __main__ - INFO - Two-sided t-test (SD vs OpenCV Small Mask): p-value = 2.89105431166255e-309, observed diff = 7.68060676956177
 2025-02-21 10:10:16,451 - __main__ - INFO - Two-sided t-test (SD vs OpenCV Middle Mask): p-value = 1.4540633028575648e-21, observed diff = -1.6306647872924813
 2025-02-21 10:10:16,451 - __main__ - INFO - Two-sided t-test (SD vs OpenCV Big Mask): p-value = 0.0, observed diff = -20.458869766235352
+2025-02-23 17:55:40,061 - __main__ - INFO - Found 1000 images in all directories
+2025-02-23 17:55:40,061 - __main__ - INFO - Loading the images
+2025-02-23 17:55:51,848 - __main__ - INFO - Loaded 1000 Real images
+2025-02-23 17:55:51,848 - __main__ - INFO - Loaded 1000 Lama images
+2025-02-23 17:55:51,848 - __main__ - INFO - Loaded 1000 OpenCV images
+2025-02-23 17:55:51,848 - __main__ - INFO - Loaded 1000 SD images
+2025-02-23 17:58:54,337 - __main__ - INFO - Loaded bootstrapped FID from fid_lama_small.npy
+2025-02-23 17:58:54,337 - __main__ - INFO - Mean FID from fid_lama_small.npy: 35.347263614654544, std: 2.3348372253276057
+2025-02-23 17:58:54,337 - __main__ - INFO - Loaded bootstrapped FID from fid_lama_middle.npy
+2025-02-23 17:58:54,337 - __main__ - INFO - Mean FID from fid_lama_middle.npy: 54.296609558105466, std: 2.6657574028695015
+2025-02-23 17:58:54,337 - __main__ - INFO - Loaded bootstrapped FID from fid_lama_big.npy
+2025-02-23 17:58:54,338 - __main__ - INFO - Mean FID from fid_lama_big.npy: 111.13015269470215, std: 4.19593069546265
+2025-02-23 17:58:54,338 - __main__ - INFO - Loaded bootstrapped FID from fid_opencv_small.npy
+2025-02-23 17:58:54,338 - __main__ - INFO - Mean FID from fid_opencv_small.npy: 35.35443404006958, std: 2.215034186167417
+2025-02-23 17:58:54,338 - __main__ - INFO - Loaded bootstrapped FID from fid_opencv_middle.npy
+2025-02-23 17:58:54,338 - __main__ - INFO - Mean FID from fid_opencv_middle.npy: 60.7913531036377, std: 2.5218963050382768
+2025-02-23 17:58:54,338 - __main__ - INFO - Loaded bootstrapped FID from fid_opencv_big.npy
+2025-02-23 17:58:54,338 - __main__ - INFO - Mean FID from fid_opencv_big.npy: 127.74751460266113, std: 4.097350159071939
+2025-02-23 17:58:54,338 - __main__ - INFO - Loaded bootstrapped FID from fid_sd_small.npy
+2025-02-23 17:58:54,338 - __main__ - INFO - Mean FID from fid_sd_small.npy: 43.03504080963135, std: 2.127034790567749
+2025-02-23 17:58:54,338 - __main__ - INFO - Loaded bootstrapped FID from fid_sd_middle.npy
+2025-02-23 17:58:54,338 - __main__ - INFO - Mean FID from fid_sd_middle.npy: 59.160688316345215, std: 2.7492076391203297
+2025-02-23 17:58:54,339 - __main__ - INFO - Loaded bootstrapped FID from fid_sd_big.npy
+2025-02-23 17:58:54,339 - __main__ - INFO - Mean FID from fid_sd_big.npy: 107.28864483642577, std: 3.599583830033606
+2025-02-23 17:58:54,339 - __main__ - INFO - Normality test for FID (Lama) Small Mask: False,details,{'statistic': 0.9935305668086271, 'p_value': 0.03079384868651745, 'normal': 'False'}
+2025-02-23 17:58:54,339 - __main__ - INFO - Normality test for FID (Lama) Middle Mask: False, details: {'statistic': 0.9937053368505252, 'p_value': 0.0356611385195679, 'normal': 'False'}
+2025-02-23 17:58:54,339 - __main__ - INFO - Normality test for FID (Lama) Big Mask: True, details: {'statistic': 0.9964661518742958, 'p_value': 0.3388344416420991, 'normal': 'True'}
+2025-02-23 17:58:54,339 - __main__ - INFO - Normality test for FID (OpenCV) Small Mask: True, details{'statistic': 0.9990406809284315, 'p_value': 0.9967237381406918, 'normal': 'True'}
+2025-02-23 17:58:54,340 - __main__ - INFO - Normality test for FID (OpenCV) Middle Mask: True, details: {'statistic': 0.9959199742479472, 'p_value': 0.22329370065895715, 'normal': 'True'}
+2025-02-23 17:58:54,340 - __main__ - INFO - Normality test for FID (OpenCV) Big Mask: True, details: {'statistic': 0.9958060711482085, 'p_value': 0.2040319217752845, 'normal': 'True'}
+2025-02-23 17:58:54,340 - __main__ - INFO - Normality test for FID (SD) Small Mask: True, details: {'statistic': 0.9967525954150972, 'p_value': 0.41587943977522235, 'normal': 'True'}
+2025-02-23 17:58:54,340 - __main__ - INFO - Normality test for FID (SD) Middle Mask: False, details: {'statistic': 0.987533758933898, 'p_value': 0.0002844553993677194, 'normal': 'False'}
+2025-02-23 17:58:54,340 - __main__ - INFO - Normality test for FID (SD) Big Mask: True, details: {'statistic': 0.9968352491819372, 'p_value': 0.4401965226038444, 'normal': 'True'}
+2025-02-23 17:58:54,341 - __main__ - INFO - Wilcoxon (OpenCV vs Lama Small Mask): p-value = 0.6998812237872718, observed diff = 0.0075206756591796875
+2025-02-23 17:58:54,341 - __main__ - INFO - Wilcoxon (OpenCV vs Lama Middle Mask): p-value = 2.195906074652304e-81, observed diff = 6.517005920410156
+2025-02-23 17:58:54,342 - __main__ - INFO - Wilcoxon (OpenCV vs Lama Big Mask): p-value = 1.3111538417715209e-83, observed diff = 16.702396392822266
+2025-02-23 17:58:54,343 - __main__ - INFO - Two-sided t-test (OpenCV vs Lama Small Mask): p-value = 0.9603163054298224, observed diff = 0.007170425415033321
+2025-02-23 17:58:54,344 - __main__ - INFO - Two-sided t-test (OpenCV vs Lama Middle Mask): p-value = 3.1197259798955427e-206, observed diff = 6.494743545532231
+2025-02-23 17:58:54,345 - __main__ - INFO - Two-sided t-test (OpenCV vs Lama Big Mask): p-value = 0.0, observed diff = 16.61736190795898
+2025-02-23 17:58:54,345 - __main__ - INFO - Wilcoxon (SD vs Lama Small Mask): p-value = 1.697607548487101e-83, observed diff = 7.738857269287109
+2025-02-23 17:58:54,346 - __main__ - INFO - Wilcoxon (SD vs Lama Middle Mask): p-value = 1.0197283530068437e-70, observed diff = 4.8538360595703125
+2025-02-23 17:58:54,346 - __main__ - INFO - Wilcoxon (SD vs Lama Big Mask): p-value = 1.9726220275294545e-38, observed diff = -3.812511444091797
+2025-02-23 17:58:54,347 - __main__ - INFO - Two-sided t-test (SD vs Lama Small Mask): p-value = 1.837551380938845e-299, observed diff = 7.687777194976803
+2025-02-23 17:58:54,348 - __main__ - INFO - Two-sided t-test (SD vs Lama Middle Mask): p-value = 2.641095706076645e-130, observed diff = 4.864078758239749
+2025-02-23 17:58:54,349 - __main__ - INFO - Two-sided t-test (SD vs Lama Big Mask): p-value = 9.996427163585529e-49, observed diff = -3.8415078582763726
+2025-02-23 17:58:54,350 - __main__ - INFO - Wilcoxon (SD vs OpenCV Small Mask): p-value = 1.319056639922145e-83, observed diff = 7.784761428833008
+2025-02-23 17:58:54,350 - __main__ - INFO - Wilcoxon (SD vs OpenCV Middle Mask): p-value = 5.5957292838887775e-19, observed diff = -1.7345314025878906
+2025-02-23 17:58:54,351 - __main__ - INFO - Wilcoxon (SD vs OpenCV Big Mask): p-value = 1.2647189486921487e-83, observed diff = -20.570106506347656
+2025-02-23 17:58:54,352 - __main__ - INFO - Two-sided t-test (SD vs OpenCV Small Mask): p-value = 2.89105431166255e-309, observed diff = 7.68060676956177
+2025-02-23 17:58:54,352 - __main__ - INFO - Two-sided t-test (SD vs OpenCV Middle Mask): p-value = 1.4540633028575648e-21, observed diff = -1.6306647872924813
+2025-02-23 17:58:54,353 - __main__ - INFO - Two-sided t-test (SD vs OpenCV Big Mask): p-value = 0.0, observed diff = -20.458869766235352

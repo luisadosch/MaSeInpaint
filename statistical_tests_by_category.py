@@ -34,7 +34,7 @@ if __name__ == "__main__":
     # Parse command line arguments
     parser = argparse.ArgumentParser(description="Run statistical tests on the inpainting results.")
     parser.add_argument("-t", "--test", type=str, default="False", help="Set to 'True' to run the tests on a subset of images.")
-    parser.add_argument("-l", "--load_data", type=str, default="False", 
+    parser.add_argument("-l", "--load_data", type=str, default="True", 
                         help="Set to 'True' to load bootstrapped numpy files from file server if they exist, else calculate them.")
     args = parser.parse_args()
 
@@ -186,31 +186,32 @@ if __name__ == "__main__":
 
     # Check normality and perform statistical tests (the code remains the same)
     lama_small_normality, lama_small_normality_details = check_normality(fid_score_lama_small_bootstrap)
-    logger.info(f"Normality test for FID (Lama) Small Mask: {lama_small_normality}")
+    logger.info(f"Normality test for FID (Lama) Small Mask: {lama_small_normality},details,{lama_small_normality_details}")
 
     lama_middle_normality, lama_middle_normality_details = check_normality(fid_score_lama_middle_bootstrap)
-    logger.info(f"Normality test for FID (Lama) Middle Mask: {lama_middle_normality}")
+    logger.info(f"Normality test for FID (Lama) Middle Mask: {lama_middle_normality}, details: {lama_middle_normality_details}")
 
     lama_big_normality, lama_big_normality_details = check_normality(fid_score_lama_big_bootstrap)
-    logger.info(f"Normality test for FID (Lama) Big Mask: {lama_big_normality}")
+    logger.info(f"Normality test for FID (Lama) Big Mask: {lama_big_normality}, details: {lama_big_normality_details}")
 
     opencv_small_normality, opencv_small_normality_details = check_normality(fid_score_opencv_small_bootstrap)
-    logger.info(f"Normality test for FID (OpenCV) Small Mask: {opencv_small_normality}")
+    logger.info(f"Normality test for FID (OpenCV) Small Mask: {opencv_small_normality}, details{opencv_small_normality_details}")
 
     opencv_middle_normality, opencv_middle_normality_details = check_normality(fid_score_opencv_middle_bootstrap)
-    logger.info(f"Normality test for FID (OpenCV) Middle Mask: {opencv_middle_normality}")
+    logger.info(f"Normality test for FID (OpenCV) Middle Mask: {opencv_middle_normality}, details: {opencv_middle_normality_details}")
 
     opencv_big_normality, opencv_big_normality_details = check_normality(fid_score_opencv_big_bootstrap)
-    logger.info(f"Normality test for FID (OpenCV) Big Mask: {opencv_big_normality}")
+    logger.info(f"Normality test for FID (OpenCV) Big Mask: {opencv_big_normality}, details: {opencv_big_normality_details}")
 
     sd_small_normality, sd_small_normality_details = check_normality(fid_score_sd_small_bootstrap)
-    logger.info(f"Normality test for FID (SD) Small Mask: {sd_small_normality}")
+    logger.info(f"Normality test for FID (SD) Small Mask: {sd_small_normality}, details: {sd_small_normality_details}")
 
     sd_middle_normality, sd_middle_normality_details = check_normality(fid_score_sd_middle_bootstrap)
-    logger.info(f"Normality test for FID (SD) Middle Mask: {sd_middle_normality}")
+    logger.info(f"Normality test for FID (SD) Middle Mask: {sd_middle_normality}, details: {sd_middle_normality_details}")
 
     sd_big_normality, sd_big_normality_details = check_normality(fid_score_sd_big_bootstrap)
-    logger.info(f"Normality test for FID (SD) Big Mask: {sd_big_normality}")
+    logger.info(f"Normality test for FID (SD) Big Mask: {sd_big_normality},
+    details: {sd_big_normality_details}")
 
     # Perform statistical tests
 

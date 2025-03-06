@@ -1,4 +1,4 @@
-# Project: AI Inpainting: Generative Models vs. Traditional Methods
+# Project: AI Inpainting - Generative Models vs. Traditional Methods
 
 #### 📝 Description  
 Developed a study to explore how modern generative AI transforms image inpainting compared to classic techniques. By benchmarking **LaMa** and **Stable Diffusion** against the traditional **Telea** method, the research reveals striking improvements in both performance and visual quality.

@@ -78,6 +78,5 @@ Image inpainting is the process of restoring missing, damaged, or removed parts 
 
 ---
 
-Explore the evolving landscape of image inpainting—where AI meets creativity and precision!
 
 

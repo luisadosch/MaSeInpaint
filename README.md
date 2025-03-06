@@ -1,27 +1,68 @@
 # AI Inpainting: Generative Models vs. Traditional Methods
 
-This study dives into how modern generative AI transforms image inpainting compared to classic techniques. By benchmarking **LaMa** and **Stable Diffusion** against the conventional **Telea** method, the research reveals striking improvements in both performance and visual quality.
+![Inpainting Results](Vis/Collage/viswithtitle1.png)
 
-## Key Highlights
+## Description
+Developed a study to explore how modern generative AI transforms image inpainting compared to classic techniques. By benchmarking **LaMa** and **Stable Diffusion** against the traditional **Telea** method, the research reveals striking improvements in both performance and visual quality.
 
-- **Enhanced Performance:**  
-  - **LaMa:** Delivers a **14.64%** improvement in FID scores, maintaining strong structural coherence—ideal for small to medium missing areas.  
-  - **Stable Diffusion:** Achieves a **13.40%** improvement by generating realistic textures, especially effective in filling large gaps.
+## Technologies Used
+- Python
+- scikit-learn
+- Stable Diffusion
+- PyTorch
+- LaMa
+- OpenCV
 
-- **Method Breakdown:**  
-  - **Telea Inpainting:** A fast, traditional approach that propagates pixel information from the image border using local averages.  
-  - **LaMa:** Combines standard and Fourier convolutions to grasp global image context, leading to coherent inpainting even with significant missing regions.  
-  - **Stable Diffusion:** Works in a latent space with a U-Net architecture and optional text prompts, enabling creative and context-aware reconstructions.
+## Challenges
+- Image preparation
+- Mask improvement
+- Model evaluation
+- Bootstrapping
+- Significance testing
 
-- **Evaluation Strategy:**  
-  Performance was rigorously assessed using the **Frechet Inception Distance (FID)** metric, supported by bootstrapping and robust statistical tests to ensure the results are significant.
+## Models Used
+- **LaMa**
+- **Stable Diffusion** (Hugging Face)
+- **Telea** (OpenCV)
 
-## Why It Matters
+## Findings
+- **AI inpainting** outperforms traditional models significantly.
+- **Mask size matters:** Different models excel depending on the size of the missing area.
+- Tailored solutions for varied inpainting challenges are possible by choosing the right model.
 
-The study underscores the leap generative AI makes over classical methods:
-- **Realism:** AI-based models produce inpainted images that closely resemble the original content.
-- **Flexibility:** Different models shine depending on the size of the missing area, offering tailored solutions for varied inpainting challenges.
-- **Innovation:** These advancements pave the way for more accurate and visually appealing image restoration, impacting fields from digital art to advanced photo editing.
+## What is Image Inpainting?
+- **Definition:** Restoring missing, damaged, or removed parts of an image.
+- **Applications:** Restoration, enhancement, and object removal.
 
-Explore the evolving landscape of image inpainting where AI meets creativity and precision!
+## Results and Model Comparison
 
+| Mask Size     | Model                 | FID    | Improvement to Baseline (%) | Ranking |
+|---------------|-----------------------|--------|-----------------------------|---------|
+| **Small Mask**    | LaMa                | 30.19  | +0.17%                      | 1       |
+|               | Telea (Baseline)      | 30.24  | 0%                          | 2       |
+|               | Stable Diffusion      | 36.74  | -21.48%                     | 3*      |
+| **Medium Mask**   | LaMa                | 45.20  | +11.67%                     | 1*      |
+|               | Telea (Baseline)      | 51.17  | 0%                          | 3*      |
+|               | Stable Diffusion      | 49.21  | +3.83%                      | 2*      |
+| **Large Mask**    | LaMa                | 93.08  | +14.27%                     | 2*      |
+|               | Telea (Baseline)      | 108.59 | 0%                          | 3*      |
+|               | Stable Diffusion      | 88.18  | +18.78%                     | 1*      |
+| **Overall**       | LaMa                | 31.67  | +14.64%                     | 1*      |
+|               | Telea (Baseline)      | 37.10  | 0%                          | 3*      |
+|               | Stable Diffusion      | 32.13  | +13.40%                     | 2*      |
+
+*Improvement to baseline is computed as:  
+`((Telea Mean FID - Model Mean FID) / Telea Mean FID) × 100%`  
+A positive value indicates better performance than Telea. An asterisk (*) denotes statistically significant ranking.
+
+## Key Findings
+- **Superior Performance:** AI-based models (LaMa & Stable Diffusion) outperform Telea by approximately 14%.
+- **Mask Size is Critical:** The size of the missing area is the most influential factor affecting inpainting quality.
+- **Model Suitability:**  
+  - **Stable Diffusion** excels with large masks, though it may sometimes generate "hallucinations."  
+  - **LaMa** is optimal for small-to-medium masks, but struggles with larger missing areas.
+- **Future Directions:** Enhancing model efficiency and reducing unwanted object generation will further improve inpainting quality.
+
+---
+
+Explore the evolving landscape of image inpainting—where AI meets creativity and precision!
